@@ -4,6 +4,7 @@ import "./App.scss";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Category from "./components/Category";
+import Offers from "./components/Offers";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +15,7 @@ function App() {
       <Navbar />
       <Hero />
       <Category />
+      <Offers />
     </div>
   );
 }
