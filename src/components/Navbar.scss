@@ -7,17 +7,20 @@ nav {
   height: 100px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
+  /* Navigation container */
   .nav-container {
     max-width: 1350px;
     width: 100%;
-    padding: 0 1rem;
+    padding: 0 2rem;
     display: flex;
 
+    /* Logo */
     .logo {
       right: 0;
       height: 50px;
     }
 
+    /* Search box */
     .search-box {
       position: relative;
       margin: 0 auto;
@@ -25,6 +28,7 @@ nav {
       display: flex;
 
       input {
+        /* Search input */
         width: 100%;
         background-color: transparent;
         border: 2px solid #fe6700;
@@ -36,10 +40,13 @@ nav {
         font-weight: 300;
         outline: none;
         transition: all 0.3s ease-in-out;
+
         &::placeholder {
           color: #1f1f1f;
         }
       }
+
+      /* Search icon */
       i {
         position: absolute;
         color: #fe6700;
@@ -52,6 +59,7 @@ nav {
       }
     }
 
+    /* Action button */
     .action {
       background-color: #fe6700;
       color: #ffff;
@@ -60,10 +68,20 @@ nav {
       border-radius: 15px;
       font-weight: 500;
       font-size: 1.3rem;
+      border: 1px solid #fe6700;
+      cursor: pointer;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        background-color: #fff;
+        color: #fe6700;
+      }
     }
   }
 
-  // 990px
+  /* Media queries */
+
+  /* 990px */
   @media screen and (max-width: 62.5em) {
     .nav-container {
       .search-box {
@@ -72,7 +90,7 @@ nav {
     }
   }
 
-  // 768px
+  /* 768px */
   @media screen and (max-width: 767px) {
     height: 80px;
     .nav-container {

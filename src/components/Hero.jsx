@@ -4,29 +4,32 @@ import "./Hero.scss";
 
 function Hero() {
   return (
-    <section className="hero">
-      <div className="flex flex-col md:flex-row">
-        <div className="w-full md:w-1/2 p-4">
-          <h1 className="hero-title mb-4">
+    <main className="hero">
+      {/* Two columns: one for text and one for image */}
+      <div className="flex flex-col md:flex-row gap-8">
+        {/* Column for text */}
+        <div className="w-full md:w-1/2">
+          {/* Main title */}
+          <h1 className="hero-title mb-4 text-center md:text-left">
             A Fair Freelancing Platform on{" "}
             <span className="orange-text">Web3</span>
           </h1>
-          <h3 className="hero-subtitle mb-4">
-            We aim to create a fair and transparent
-            <span className="orange-text"> freelancing platform </span> where
+          {/* Subtitle */}
+          <h3 className="hero-subtitle mb-4 text-center md:text-left">
+            We aim to create a fair and transparent{" "}
+            <span className="orange-text">freelancing platform</span> where
             everyone benefits.
           </h3>
-          {/* only show action button on screens larger than md */}
+          {/* Tutorial button (hidden on mobile) */}
           <div className="hidden md:block">
             <button className="action-button">
               <i className="fa-solid fa-play"></i>Tutorial
             </button>
           </div>
-
-          {/* only show search bar on screens smaller than md */}
+          {/* Search bar (visible on mobile) */}
           <div className="md:hidden">
             <div className="flex flex-row">
-              <div className="search-box">
+              <div className="search-box pt-8 pb-8">
                 <input
                   type="text"
                   className="search"
@@ -37,17 +40,19 @@ function Hero() {
             </div>
           </div>
         </div>
-        <div className="w-full md:w-1/2 p-4">
+        {/* Column for image */}
+        <div className="w-full md:w-1/2 text-center">
+          {/* Main image */}
           <img className="w-full h-auto" src={illustration} alt="Example" />
+          {/* Tutorial button (visible on mobile) */}
           <div className="md:hidden">
             <button className="action-button">
-                <i className="fa-solid fa-play"></i>Tutorial
+              <i className="fa-solid fa-play"></i>Tutorial
             </button>
-
           </div>
         </div>
       </div>
-    </section>
+    </main>
   );
 }
 

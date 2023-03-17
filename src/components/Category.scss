@@ -1,0 +1,23 @@
+.categories {
+  position: relative;
+  max-width: 1350px;
+  margin: 70px auto;
+  padding: 0 2rem;
+
+  .section-title {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .category-carousel {
+    position: relative;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  /* 768px */
+  @media screen and (max-width: 767px) {
+    max-width: 600px;
+  }
+}

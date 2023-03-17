@@ -1,0 +1,114 @@
+.icon-carousel {
+  position: relative;
+  margin: 30px auto;
+
+  /* Individual item in the carousel */
+  .icon-carousel-item {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 15px;
+    height: 100px;
+
+    /* Content inside the item */
+    .icon-carousel-item-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 90%;
+      width: 90%;
+      margin: 0 auto;
+      border-radius: 15px;
+
+      /* Icon */
+      i {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        border-radius: 15px;
+      }
+
+      /* Category title */
+      .category-title {
+        font-size: 1rem;
+        font-weight: 300;
+        margin-top: 3px;
+      }
+
+      /* Active category style */
+      &.active-category {
+        background-color: #1f1f1f;
+        i {
+          color: #fe6700;
+        }
+
+        .category-title {
+          color: #ffff;
+        }
+      }
+    }
+  }
+
+  /* Navigation buttons */
+  .icon-carousel-buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    /* Button styles */
+    .icon-carousel-button {
+      color: #1f1f1f;
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    /* Position of first button */
+    .icon-carousel-button:first-child {
+      margin-left: -30px;
+    }
+
+    /* Position of second button */
+    .icon-carousel-button:last-child {
+      margin-right: -30px;
+    }
+
+    /* Hover styles */
+    .icon-carousel-button:hover {
+      color: #fe6700;
+    }
+
+    /* Responsive styles for button positions */
+    @media (max-width: 1370px) {
+      .icon-carousel-button:first-child {
+        margin-left: -10px;
+      }
+
+      .icon-carousel-button:last-child {
+        margin-right: -10px;
+      }
+    }
+
+    /* Responsive styles for hiding navigation buttons */
+    @media (max-width: 768px) {
+      .icon-carousel-button:first-child {
+        display: none;
+      }
+
+      .icon-carousel-button:last-child {
+        display: none;
+      }
+    }
+  }
+}
